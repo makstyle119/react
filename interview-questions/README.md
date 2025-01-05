@@ -124,6 +124,115 @@ const layout () => {
 **Q12- What is HOC (High-Order Component) ?**  <br />
 **A12- HOC (High-Order Component)** takes a component and return a new component - common example is a layout component - use to add reusability and more logic to existing components.
 
+---
+
+**Q13- Can we make multiple stores in a single react app ?**  <br />
+**A13-** Yes you can, you just have to add more provider as you add more stores in your app 
+```
+const ThemeContext = React.createContext();
+const UserContext = React.createContext();
+
+function App() {
+  return (
+    <ThemeContext.Provider value={{ theme: 'dark', toggleTheme: /* ... */ }}>
+      <UserContext.Provider value={{ user: /* ... */, updateUser: /* ... */ }}>
+        {/* Your application components */}
+      </UserContext.Provider>
+    </ThemeContext.Provider>
+  );
+}
+```
+yes this how you can do this.
+
+---
+
+**Q14- why map asked you to add a key in your map inside JSX ?**  <br />
+**A14-** If you are dynamically rendering anything in **react**, **React** needs a unique identifier so it can update it later if required.
+
+---
+
+**Q15- give me a ideal React Folder Structure ?** <br />
+**A15-** well here it's a decent folder structure for **React** App
+```
+📂 my-react-app
+├── 📂 public
+│   ├── 📄 index.html 
+│   └── 📄 favicon.ico 
+├── 📂 src/
+│   ├── 📂 components/ 
+│   │   ├── 📄 Button.js
+│   │   ├── 📄 Input.js
+│   │   ├── 📄 Header.js
+│   │   ├── 📄 Footer.js
+│   │   ├── 📄 Card.js 
+│   │   └── ... 
+│   ├── 📂 pages/
+│   │   ├── 📄 Home.js
+│   │   ├── 📄 About.js
+│   │   ├── 📄 Contact.js
+│   │   └── ...
+│   ├── 📂 styles/
+│   │   ├── 📄 GlobalStyles.css 
+│   │   ├── 📄 Home.css
+│   │   ├── 📄 About.css
+│   │   └── ...
+│   ├── 📂 utils/
+│   │   ├── 📄 helpers.js
+│   │   ├── 📄 api.js 
+│   │   └── ... 
+│   ├── 📂 assets/
+│   │   ├── 📄 images/
+│   │   │   ├── 📄 logo.png
+│   │   │   ├── 📄 background.jpg
+│   │   │   └── ...
+│   │   ├── 📄 fonts/
+│   │   │   ├── 📄 font-awesome.ttf 
+│   │   │   └── ...
+│   ├── 📄 App.js
+│   ├── 📄 index.js
+│   └── ...
+├── 📄 package.json
+├── 📄 README.md
+└── ... (other configuration files like .gitignore, etc.)
+```
+
+---
+
+**Q16- how can you create a custom hook in react ?**  <br />
+**A16-** In **React** you can create a custom hook as any function (either calling an API or doing certain work).
+- custom hooks good for reusable code
+- a custom hook always start with the word `use` then whatever it do
+```
+function useCounter(initialValue = 0) {
+  const [count, setCount] = useState(initialValue);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return { count, increment, decrement };
+}
+
+function MyComponent() {
+  const { count, increment, decrement } = useCounter(5); 
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+}
+```
+
+---
+
 ## Resources
 I start my journey using this cool stuff so shout to them:
+- **[Abdullah Motiwala](https://pk.linkedin.com/in/abdullahmotiwala)** - special thanks to him, he guide me in almost all question and if you are looking for a great Software Engineer he is a great choice
 - [Q1 - Q12](https://www.youtube.com/watch?v=eWRfhZUzrAc&t=12581s)
