@@ -37,3 +37,9 @@ this is my journey to learn and understand React
 - **Increased developer productivity:** Next.js provides a range of features and tools that can speed up development and make it more efficient.
 - **Better SEO:** SSR can help improve your application's search engine ranking.
 - **Strong community and ecosystem:** React and Next.js have large and active communities, providing access to a wealth of resources, tutorials, and libraries.
+
+**Q3- What is DOM ?** <br />
+**A3-** The **Document Object Model (DOM)** is an object representation of the HTML elements on a web page.
+
+**Q004- How does the browser render a web page ?** <br />
+**A004-** When a user visits a web page, the server returns an HTML file to the **browser**. The **browser** then reads the HTML and constructs the **DOM**. The **DOM** is an object representation of the HTML elements.  
