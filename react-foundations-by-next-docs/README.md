@@ -43,3 +43,43 @@ this is my journey to learn and understand React
 
 **Q004- How does the browser render a web page ?** <br />
 **A004-** When a user visits a web page, the server returns an HTML file to the **browser**. The **browser** then reads the HTML and constructs the **DOM**. The **DOM** is an object representation of the HTML elements.  
+
+## Folder Structure:
+
+```
+|- chapter-03
+    |- index.html
+```
+
+## Code Explaining
+
+- chapter-03/index.html
+```html
+<html>
+	<body>
+		<div
+			id="app"
+		>			
+		</div>
+		<script
+			type="text/javascript"
+		>
+			// Select the div element with 'app' id
+			const app = document.getElementById('app');
+		
+			// Create a new H1 element
+			const header = document.createElement('h1');
+
+			// Create a new text node for the H1 Element
+			const text = 'Develop. Preview. Ship.';
+			const headerContent = document.createTextNode(text);
+
+			// Append the text to H1 element
+			header.appendChild(headerContent);
+
+			// Place the H1 element inside the div
+			app.appendChild(header);			
+		</script>
+	</body>
+</html>
+```
