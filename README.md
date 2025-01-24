@@ -14,6 +14,8 @@ this is my journey to learn and understand React
 |   |   ├── 📄 index.html
 |   ├── 📂 chapter-05
 |   |   ├── 📄 index.html
+|   ├── 📂 chapter-06
+|   |   ├── 📄 index.html
 |   └── 📄 README.md
 └── 📄 README.md
 ```
