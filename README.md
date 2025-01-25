@@ -8,14 +8,6 @@ this is my journey to learn and understand React
 ├── 📂 interview-questions
 ├   └── 📄 README.md
 ├── 📂 react-foundations-by-next-docs
-|   ├── 📂 chapter-03
-|   |   ├── 📄 index.html
-|   ├── 📂 chapter-04
-|   |   ├── 📄 index.html
-|   ├── 📂 chapter-05
-|   |   ├── 📄 index.html
-|   ├── 📂 chapter-06
-|   |   ├── 📄 index.html
-|   └── 📄 README.md
+|   └── 📄 README.md (react-foundations-by-next-docs folder structure and detail are here)
 └── 📄 README.md
 ```
